@@ -1,0 +1,10 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M40 0C40 22.0914 22.0914 40 0 40C22.0914 40 40 57.9086 40 80C40 57.9086 57.9086 40 80 40C57.9086 40 40 22.0914 40 0Z" fill="url(#paint0_linear_2407_1537)"/>
+<defs>
+<linearGradient id="paint0_linear_2407_1537" x1="2" y1="40" x2="49" y2="63" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3D7FFF"/>
+<stop offset="0.568474" stop-color="#CF69FF"/>
+<stop offset="1" stop-color="#FFA573"/>
+</linearGradient>
+</defs>
+</svg>

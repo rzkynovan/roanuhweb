@@ -1,0 +1,47 @@
+// Change Bg nav while scrolldown
+function scrollHeader(){
+    const nav = document.getElementById('header')
+    const icon = document.getElementById('navIcon')
+    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+    if(this.scrollY >= 200) 
+        nav.classList.add('bg-black'); 
+
+        else nav.classList.remove('bg-black')
+    if(this.scrollY >= 400) icon.classList.add('scale-75'); else icon.classList.remove('scale-75')
+}
+window.addEventListener('scroll', scrollHeader)
+
+
+// Change Active class on navbar
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive(){
+    const scrollY = window.pageYOffset
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 400;
+        sectionId = current.getAttribute('id')
+
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav-item a[href*=' + sectionId + ']').classList.add('nav-active')
+        }else{
+            document.querySelector('.nav-item a[href*=' + sectionId + ']').classList.remove('nav-active')
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive)
+
+
+// Parallax Event
+document.addEventListener("mousemove", parallax);
+    function parallax(e){
+      document.querySelectorAll(".object").forEach(function(move){
+
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value) / 250;
+        var y = (e.clientY * moving_value) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+      });
+    }

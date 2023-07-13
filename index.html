@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Web Icon -->
+    <link rel="shortcut icon" href="assets/img/Subtract.svg" type="image/x-icon">
+    <!-- ============== CSS =============== -->
+    <!-- Tailwind -->
+    <link rel="stylesheet" href="dist/output.css">
+    <!-- Main -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- ================================== -->
+
+    <!-- Icon -->
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Image Hover -->
+    <link rel="stylesheet" href="assets/css/imagehover/imghover.css">
+
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <title>Roa Nuh</title>
+</head>
+<body>
+    <header id="header" class="sticky md:-top-4 top-0 w-full z-50 bg-opacity-25 " x-data="{ navOpen : false }">
+        <div x-show="navOpen" x-transition.duration.1000 class="fixed z-40 w-full h-screen bg-black text-white flex justify-center items-center">
+            <ul class="text-white flex flex-col items-center gap-12">
+                <li class="nav-item"><a href="#about">About</a></li>
+                <li class="nav-item"><a href="#portfolio">Portofolio</a></li>
+                <li class="nav-item"><a href="">Exploration</a></li>
+                <li class="nav-item"><a href="#contacts">Contacts</a></li>
+                <button @click="navOpen = ! navOpen"><i class="ri-close-line text-2xl"></i></button>
+            </ul>
+        </div>
+        <nav class="h-[100px] px-4 md:px-0" >
+            <div class="flex md:justify-center justify-between py-4">
+                <div class="md:hidden"></div>
+                <ul class="flex md:gap-16 items-center font-['Uber Light']" style="font-size: 20px;">
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#about">About</a></li>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#portfolio">Portofolio</a></li>
+                    <a href=""><img id="navIcon" class="transition-transform" src="assets/img/headicon.png" alt=""></a>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="">Exploration</a></li>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#contacts">Contacts</a></li>
+                </ul>
+                <a href="#" @click="navOpen = true" class="md:hidden z-50 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M13 13.5H3C2.73478 13.5 2.48043 13.6054 2.29289 13.7929C2.10536 13.9804 2 14.2348 2 14.5C2 14.7652 2.10536 15.0196 2.29289 15.2071C2.48043 15.3946 2.73478 15.5 3 15.5H13C13.2652 15.5 13.5196 15.3946 13.7071 15.2071C13.8946 15.0196 14 14.7652 14 14.5C14 14.2348 13.8946 13.9804 13.7071 13.7929C13.5196 13.6054 13.2652 13.5 13 13.5ZM21 8.5H3C2.73478 8.5 2.48043 8.60536 2.29289 8.79289C2.10536 8.98043 2 9.23478 2 9.5C2 9.76522 2.10536 10.0196 2.29289 10.2071C2.48043 10.3946 2.73478 10.5 3 10.5H21C21.2652 10.5 21.5196 10.3946 21.7071 10.2071C21.8946 10.0196 22 9.76522 22 9.5C22 9.23478 21.8946 8.98043 21.7071 8.79289C21.5196 8.60536 21.2652 8.5 21 8.5Z" fill="white"/>
+                    </svg>
+                </a>
+               
+                
+            </div>
+        </nav>
+    </header>
+    <main class="">
+        <section class="hero md:py-[100px] py-14 min-h-full md:min-h-[620px] bg-no-repeat bg-cover bg-bottom" id="hero">
+            <div class="md:px-[100px] px-[20px] flex flex-col items-center">
+                <h1 class="flex text-center flex-col items-center text-2xl md:text-[64px] md:leading-normal">Crafting in both visual and 
+                    <span class="flex">interaction design
+                        <img src="assets/img/Subtract.svg" class="md:w-[40px] w-4">
+                    </span>
+                    
+                </h1> 
+                <p class="text-xs max-w-[250px] md:max-w-none text-center md:text-2xl md:mt-16 mt-12">Help to engage your product performance. Control the entire experience. </p>
+                <a href="" class="bg-white text-black py-4 px-8 mt-12 md:mt-24 rounded-full flex items-center gap-2 transition-transform hover:shadow-2xl shadow-gray-300">See my resume <i class="ri-arrow-right-up-line transition-transform"></i></a>
+                
+            </div>
+        </section> 
+
+        <section class="worked py-14 "  id="worked">
+            <div class="wrapper md:px-[152px] px-10">
+                <div class="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-5  flex-wrap items-center">
+                    <a href="" class="col-span-1 object" data-value="5"><img class="" src="assets/img/logo-greative.png" alt=""></a>
+                    <a href="" class="col-span-1 object" data-value="-4"><img src="assets/img/bukalapak2.png" alt=""></a>
+                    <a href="" class="col-span-1 object" data-value="3"><img src="assets/img/logo-ukteam.png" alt=""></a>
+                    <a href="" class="col-span-1 object" data-value="-5"><img src="assets/img/financialku.png" alt=""></a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about md:px-[100px] md:py-[80px] py-[60px] px-5" id="about">
+            <div class="profile grid items-center gap-4 md:gap-0 grid-cols-1 md:grid-cols-3 ">
+                <figure class="imghvr-flip-horiz col-span-1 w-[400px] h-[400px] rounded-3xl">
+                    <img src="assets/img/roanuh.png" class="">
+                    <figcaption class="bg-no-repeat bg-center" style="background-image: url('assets/img/headicon.png');">
+                      <img src="assets/img/headicon.png" class="" alt="">
+                    </figcaption>
+                  </figure>
+                <div class="bg-[#232424] p-8 flex items-end col-span-1 max-w-[400px] h-[400px] rounded-3xl">
+                    
+                    <h2 class="text-5xl flex flex-col gap-1 items-start p-0 m-0"><span class="m-0 p-0">👋</span>Hi, I'm Nuh</h2>
+                </div>
+
+                <figure class="imghvr-flip-horiz col-span-1 w-[400px] h-[400px] rounded-3xl">
+                    <img src="assets/img/about3.png" class="">
+                    <figcaption>
+                      <ul class="text-black text-xl list-disc flex flex-col gap-4">
+                        <b>Working Experience</b>
+                        <li>Product Manager
+                            <br>
+                            <span class="text-base">at <b class="text-pink-600">Bukalapak</b></span>
+                        </li>
+                        <li>Financialku</li>
+                        <li>Greative</li>
+                      </ul>
+                    </figcaption>
+                  </figure>
+            </div>
+            <div class="description p-16 bg-[#232424] rounded-[40px] mt-5">
+                <h1 class=" text-xl md:text-[64px] leading-tight object" data-value="6">
+                    I am a <span>self-taught product designer</span>, I help companies I joined with tailor-made solutions. With each project, I push my work to new horizons, always putting quality first.
+                </h1>
+                <p class="mt-10 text-[#7B7B7B] md:text-2xl text-base object" data-value="-4">
+                    What good design means for me?
+                </p>
+                <p class="mt-5 md:text-4xl text-[20px] object" data-value="2">
+                    Crack the complexity to enable something for user and allow businesses to provide it in a simple way.
+                </p>
+            </div>
+        </section>
+
+        <section class="portfolio md:px-[100px] md:py-[80px] py-[60px]" id="portfolio">
+            <h2 class="text-center title text-4xl">
+                Selected Portfolio
+            </h2>
+
+            <div class="wrapper flex flex-col mt-[40px] gap-20 md:gap-0">
+                <a href="" class="item grid overflow-hidden h-[320px] md:h-[720px] grid-cols-3 p-10 rounded-[40px] "> 
+                    <div class="image-compound md:translate-x-10 col-span-2 relative  gap-[-40px]">
+                        <img src="assets/img/virtualconser/1.png" class="object-fit absolute z-[4] left-0 md:bottom-0 object" data-value="1" alt="">
+                        <img src="assets/img/virtualconser/2.png" class="object-fit absolute z-[3] md:z-[5] left-1/4 md:bottom-0 object" data-value="20" alt="">
+                        <img src="assets/img/virtualconser/3.png" class="object-fit absolute z-[2] left-2/4 md:bottom-0 object" data-value="30" alt="">
+                    </div>
+                    <div class="col-span-1 flex flex-col items-end">
+                        <p class=" text-[20px] md:text-[#7B7B7B] text-white bg-gray-300 px-4 py-2 text-xs text-center md:bg-transparent rounded-xl z-10">Mobile App</p>
+                        <h3 class="mt-5 text-4xl z-10  font-bold md:font-normal">Vidio Virtual Concert</h3>
+                    </div>
+                </a>
+                <a href="" class="item grid overflow-hidden h-[320px] md:h-[720px] grid-cols-3 p-10 rounded-[40px] "> 
+                    <div class="image-compound col-span-2 relative  gap-[-40px]">
+                        <img src="assets/img/finance/front-1.png" class="object-fit absolute z-[6] left-0 md:bottom-2/4 object" data-value="5" alt="">
+                        <img src="assets/img/finance/1.png" class="object-fit absolute z-[4] left-0 top-2/4 md:top-0 md:bottom-0 object" data-value="10" alt="">
+                        <img src="assets/img/finance/2.png" class="object-fit absolute z-[3] md:z-[5] left-1/4 md:bottom-0 object" data-value="20" alt="">
+                        <img src="assets/img/finance/3.png" class="object-fit absolute z-[2] left-2/4 md:bottom-0 object" data-value="40" alt="">
+                        <img src="assets/img/finance/front-2.png" class="object-fit absolute z-[6] left-2/4 bottom-0 object" data-value="4" alt="">
+                    </div>
+                    <div class="col-span-1 flex flex-col items-end">
+                        <p class=" text-[20px] md:text-[#7B7B7B] text-white bg-gray-300 px-4 py-2 text-xs text-center md:bg-transparent rounded-xl z-10">Mobile App</p>
+                        <h3 class="mt-5 text-4xl text-gray-500 md:text-white z-10 font-bold md:font-normal  ">Financial Check Up</h3>
+                    </div>
+                </a>
+                <a href="" class="item grid overflow-hidden h-[320px] md:h-[720px] grid-cols-3 p-10 rounded-[40px] "> 
+                    <div class="image-compound col-span-2 relative  gap-[-40px]">
+                        <img src="assets/img/bukamotor/1.png" class="object-fit rounded-3xl absolute z-[4] left-0 top-0 md:top-auto md:-bottom-1/4 object" data-value="5" alt="">
+                        <img src="assets/img/bukamotor/2.png" class="object-fit rounded-3xl absolute z-[3] z-[5] left-1/4 md:-bottom-1/4 object" data-value="20" alt="">
+                        <img src="assets/img/bukamotor/3.png" class="object-fit rounded-3xl absolute z-[2] left-2/4 md:-bottom-1/4 object" data-value="30" alt="">
+                    </div>
+                    <div class="col-span-1 flex flex-col items-end">
+                        <p class=" text-[20px] md:text-[#7B7B7B] text-white bg-gray-300 px-4 py-2 text-xs text-center md:bg-transparent rounded-xl z-10">Mobile App</p>
+                        <h3 class="mt-5 text-4xl z-10 text-blue-500 md:text-white font-bold md:font-normal ">BukaAuto Agent</h3>
+                    </div>
+                </a>
+
+            </div>
+            <div class="flex justify-center mt-[100px]">
+                <img src="assets/img/Subtract.svg" alt="">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white text-center text-black py-[120px] px-10 md:px-[100px]" id="contacts">
+        <h2 class="md:text-4xl text-[20px] tracking-widest">Hit me up for collaboration</h2>
+        <ul class="flex flex-col tracking-widest md:flex-row mt-[60px] md:mt-[84px] gap-8 md:gap-20 flex-wrap items-center justify-center">
+            <li><a href="" class="hover:opacity-75">EMAIL</a></li>
+            <li><a href="" class="hover:opacity-75">DRIBBBLE</a></li>
+            <li><a href="" class="hover:opacity-75">MEDIUM</a></li>
+            <li><a href="" class="hover:opacity-75">LINKEDIN</a></li>
+            <li><a href="" class="hover:opacity-75">TELEGRAM</a></li>
+        </ul>
+    </footer>
+
+</body>
+<script src="assets/js/main.js"></script>
+</html>

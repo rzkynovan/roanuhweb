@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Uber Light";
+  src: url("../font/ubermove/UberMove-Light.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Uber Regular";
+  src: url("../font/ubermove/UberMove-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: "Uber Medium";
+  src: url("../font/ubermove/UberMoveMedium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Uber Bold";
+  src: url("../font/ubermove/UberMoveBold.otf") format("opentype");
+}
+@font-face {
+  font-family: "Specify Bold";
+  src: url("../font/specify/SpecifyPERSONAL-ExpBold.ttf") format("opentype");
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0A0A0A;
+  color: white;
+  font-family: "Uber Medium";
+}
+
+@media screen and (max-width: 639px) {
+  header nav ul li {
+    display: none;
+  }
+}
+
+main .hero {
+  background-image: url("../img/ambience.png");
+  position: relative;
+  background-attachment: fixed;
+  background-position: center 0px;
+  background-repeat: no-repeat;
+}
+main .hero h1 {
+  width: 100%;
+  position: relative;
+  background: linear-gradient(90deg, #FFFFFF 0%, #ADC1E0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Specify Bold";
+}
+main .hero h1 img {
+  position: a;
+}
+main .hero p {
+  font-family: "Uber Light";
+}
+main .hero a:hover i {
+  transform: rotate(45deg);
+}
+main .worked img {
+  filter: grayscale(100);
+  transition: 0.4s;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .worked img:hover {
+  filter: grayscale(0);
+}
+main .about h2 {
+  font-family: "Uber Bold";
+}
+main .about .description h1 {
+  font-family: "Uber Bold";
+}
+main .about .description h1 span {
+  background: linear-gradient(90deg, #5965FA 0%, #C654FB 54.69%, #F0A26D 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .portfolio .title {
+  font-family: "Specify Bold";
+}
+main .portfolio .wrapper .item {
+  background: linear-gradient(180deg, #222323 0%, rgba(34, 35, 35, 0) 100%);
+}
+
+footer {
+  font-family: "Specify Medium";
+}
+footer h2 {
+  font-family: "Specify Bold";
+}/*# sourceMappingURL=styles.css.map */

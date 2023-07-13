@@ -1,0 +1,138 @@
+// FONT Imported
+
+@font-face {
+    font-family: "Uber Light";
+    src: url("../font/ubermove/UberMove-Light.ttf") format("opentype");
+  }
+  @font-face {
+      font-family: "Uber Regular";
+      src: url("../font/ubermove/UberMove-Regular.ttf") format("opentype");
+    }
+@font-face {
+    font-family: "Uber Medium";
+    src: url("../font/ubermove/UberMoveMedium.otf") format("opentype");
+  }
+@font-face {
+    font-family: "Uber Bold";
+    src: url("../font/ubermove/UberMoveBold.otf") format("opentype");
+  }
+@font-face {
+    font-family: "Specify Bold";
+    src: url("../font/specify/SpecifyPERSONAL-ExpBold.ttf") format("opentype");
+  }
+
+//  Color Variable
+$bg : #0A0A0A;
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: $bg;
+    color: white;
+    font-family: "Uber Medium";
+}
+
+header{
+
+    nav{
+        ul{
+            li{
+                @media screen and (max-width: 639px) {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    
+    
+}
+
+main{
+    .hero{
+        background-image: url("../img/ambience.png");
+        position: relative;
+    // background-size: cover;
+    background-attachment: fixed;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    
+        h1{
+            width: 100%;
+            position: relative;
+            background: linear-gradient(90deg, #FFFFFF 0%, #ADC1E0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Specify Bold';
+    
+            img{
+                position: a;
+            }
+        }
+    
+        p{
+            font-family: "Uber Light";
+        }
+    
+        a:hover i{
+            transform: rotate(45deg); 
+            
+        }
+        
+    
+    }
+
+    .worked{
+        img{
+            filter: grayscale(100);
+            transition: .4s;
+            object-fit: contain;
+            &:hover{
+                filter: grayscale(0);
+            }
+        }
+    }
+
+    .about{
+        h2{
+            font-family: "Uber Bold";
+        }
+        .description{
+            h1{
+                font-family: "Uber Bold";
+
+                span{
+                    background: linear-gradient(90deg, #5965FA 0%, #C654FB 54.69%, #F0A26D 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+
+    .portfolio{
+        .title{
+            font-family: "Specify Bold";
+        }
+
+        .wrapper{
+            .item{
+                background: linear-gradient(180deg, #222323 0%, rgba(34, 35, 35, 0) 100%);
+            }
+        }
+    }
+    
+}
+
+footer{
+    font-family: "Specify Medium";
+
+    h2{
+        font-family: "Specify Bold";
+    }
+}
