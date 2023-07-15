@@ -45,3 +45,35 @@ document.addEventListener("mousemove", parallax);
         move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
       });
     }
+
+
+// Swiper Exploration
+var swiper = new Swiper(".swiperExploration", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    centeredSlides:true,
+    initialSlide:1,
+    loop:true,
+    grapCursor:true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    slidesPerView:1,
+      breakpoints: {
+        // when window width is <= 499px
+        499: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 30
+        },
+        // when window width is <= 999px
+        1024: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 24
+        }
+    }
+
+  });

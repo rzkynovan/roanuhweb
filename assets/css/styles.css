@@ -40,9 +40,13 @@ body {
 main .hero {
   background-image: url("../img/ambience.png");
   position: relative;
-  background-attachment: fixed;
   background-position: center 0px;
   background-repeat: no-repeat;
+}
+@media screen and (min-width: 1024px) {
+  main .hero {
+    background-attachment: fixed;
+  }
 }
 main .hero h1 {
   width: 100%;
@@ -87,6 +91,47 @@ main .portfolio .title {
 }
 main .portfolio .wrapper .item {
   background: linear-gradient(180deg, #222323 0%, rgba(34, 35, 35, 0) 100%);
+}
+main .exploration .title {
+  font-family: "Specify Bold";
+}
+main .exploration .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  cursor: grab;
+}
+@media screen and (min-width: 1024px) {
+  main .exploration .swiper-slide-active {
+    transform: scale(1.05);
+  }
+}
+main .exploration .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .exploration .swiper-button-next,
+main .exploration .swiper-button-prev {
+  z-index: 20;
+  width: 40px;
+}
+main .exploration .swiper-button-next img:hover,
+main .exploration .swiper-button-prev img:hover {
+  opacity: 0.8;
+}
+main .exploration .swiper-button-next::after,
+main .exploration .swiper-button-prev::after {
+  content: "";
+}
+main .exploration .swiper-pagination-bullet {
+  background-color: #fff !important;
 }
 
 footer {

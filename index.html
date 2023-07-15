@@ -17,12 +17,15 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <!-- ================================== -->
 
-    <!-- Icon -->
     <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- Image Hover -->
     <link rel="stylesheet" href="assets/css/imagehover/imghover.css">
+
+    <!--  Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 
     <!-- Alpine JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -31,11 +34,11 @@
 </head>
 <body>
     <header id="header" class="sticky md:-top-4 top-0 w-full z-50 bg-opacity-25 " x-data="{ navOpen : false }">
-        <div x-show="navOpen" x-transition.duration.1000 class="fixed z-40 w-full h-screen bg-black text-white flex justify-center items-center">
+        <div x-show="navOpen" x-transition.duration.1000 class="absolute z-40 w-full h-screen bg-black text-white flex justify-center items-center">
             <ul class="text-white flex flex-col items-center gap-12">
                 <li class="nav-item"><a href="#about">About</a></li>
                 <li class="nav-item"><a href="#portfolio">Portofolio</a></li>
-                <li class="nav-item"><a href="">Exploration</a></li>
+                <li class="nav-item"><a href="#exploration">Exploration</a></li>
                 <li class="nav-item"><a href="#contacts">Contacts</a></li>
                 <button @click="navOpen = ! navOpen"><i class="ri-close-line text-2xl"></i></button>
             </ul>
@@ -47,18 +50,20 @@
                     <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#about">About</a></li>
                     <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#portfolio">Portofolio</a></li>
                     <a href=""><img id="navIcon" class="transition-transform" src="assets/img/headicon.png" alt=""></a>
-                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="">Exploration</a></li>
+                    <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#exploration">Exploration</a></li>
                     <li class="nav-item hover:text-zinc-400 transition-colors"><a href="#contacts">Contacts</a></li>
                 </ul>
-                <a href="#" @click="navOpen = true" class="md:hidden z-50 flex items-center">
+                <button @click="navOpen = true" class="md:hidden z-50 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M13 13.5H3C2.73478 13.5 2.48043 13.6054 2.29289 13.7929C2.10536 13.9804 2 14.2348 2 14.5C2 14.7652 2.10536 15.0196 2.29289 15.2071C2.48043 15.3946 2.73478 15.5 3 15.5H13C13.2652 15.5 13.5196 15.3946 13.7071 15.2071C13.8946 15.0196 14 14.7652 14 14.5C14 14.2348 13.8946 13.9804 13.7071 13.7929C13.5196 13.6054 13.2652 13.5 13 13.5ZM21 8.5H3C2.73478 8.5 2.48043 8.60536 2.29289 8.79289C2.10536 8.98043 2 9.23478 2 9.5C2 9.76522 2.10536 10.0196 2.29289 10.2071C2.48043 10.3946 2.73478 10.5 3 10.5H21C21.2652 10.5 21.5196 10.3946 21.7071 10.2071C21.8946 10.0196 22 9.76522 22 9.5C22 9.23478 21.8946 8.98043 21.7071 8.79289C21.5196 8.60536 21.2652 8.5 21 8.5Z" fill="white"/>
                     </svg>
-                </a>
+                </button>
                
                 
             </div>
         </nav>
+
+
     </header>
     <main class="">
         <section class="hero md:py-[100px] py-14 min-h-full md:min-h-[620px] bg-no-repeat bg-cover bg-bottom" id="hero">
@@ -77,7 +82,7 @@
 
         <section class="worked py-14 "  id="worked">
             <div class="wrapper md:px-[152px] px-10">
-                <div class="grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-5  flex-wrap items-center">
+                <div class="grid md:grid-cols-4 grid-cols-1 md:gap-8 gap-5  flex-wrap items-center">
                     <a href="" class="col-span-1 object" data-value="5"><img class="" src="assets/img/logo-greative.png" alt=""></a>
                     <a href="" class="col-span-1 object" data-value="-4"><img src="assets/img/bukalapak2.png" alt=""></a>
                     <a href="" class="col-span-1 object" data-value="3"><img src="assets/img/logo-ukteam.png" alt=""></a>
@@ -170,7 +175,41 @@
                 </a>
 
             </div>
-            <div class="flex justify-center mt-[100px]">
+            
+        </section>
+
+        <section class="exploration md:px-[100px] md:py-[80px] py-[60px]" id="exploration">
+            <h1 class="title text-4xl text-center ">Visual Exploration</h1>
+            <div class="swiper swiperExploration mt-[60px]  ">
+                <div class="swiper-wrapper md:py-[100px]">
+                  <div class="swiper-slide">
+                    <img src="assets/img/exploration/1.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/exploration/1.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/exploration/1.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/exploration/1.png" alt="">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="assets/img/exploration/1.png" alt="">
+                  </div>
+                </div>
+                <div class="swiper-pagination z-20"></div>
+                <div class="navigation">
+                    <div class="swiper-button-next">
+                        <img src="assets/img/next.svg" alt="">
+                    </div>
+                    
+                    <div class="swiper-button-prev">
+                        <img src="assets/img/prev.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-[60px] md:mt-[100px]">
                 <img src="assets/img/Subtract.svg" alt="">
             </div>
         </section>
@@ -188,5 +227,6 @@
     </footer>
 
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 </html>
